@@ -7,7 +7,6 @@ movies = {
     "Interstellar": ["sci-fi", "drama"]
 }
 
-# user's preferences
 likes = input("Which genres do you like ? (comma separated) ").lower().split(",")
 
 # Clean up spaces

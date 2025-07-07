@@ -1,5 +1,3 @@
-# Simple Tic-Tac-Toe game
-
 board = [" "]*9
 
 def show():

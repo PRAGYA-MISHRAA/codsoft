@@ -26,7 +26,7 @@ def ai():
             board[i] = "O"
             break
 
-print("Tic-Tac-Toe. You = X, AI = O.")
+print("Tic-Tac-Toe! You = X, AI = O.")
 show()
 
 while True:
@@ -39,17 +39,17 @@ while True:
 
     show()
     if check("X"):
-        print("You win!")
+        print("You are the winner!")
         break
     if " " not in board:
-        print("Draw!")
+        print("tie!!")
         break
 
     ai()
     show()
     if check("O"):
-        print("AI wins!")
+        print("AI is the winner!")
         break
     if " " not in board:
-        print("Draw!")
+        print("tie!!")
         break

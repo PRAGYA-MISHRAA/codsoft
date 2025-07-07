@@ -1,24 +1,17 @@
 movies = {
-    "Mad Max": ["action", "adventure"],
-    "Die Hard": ["action", "thriller"],
-    "Titanic": ["romance", "drama"],
-    "Notebook": ["romance", "drama"],
-    "Inception": ["sci-fi", "thriller"],
-    "Interstellar": ["sci-fi", "drama"]
+    "inception": ["sci-fi", "thriller"],
+    "interstellar": ["sci-fi", "drama"],
+    "avatar": ["sci-fi", "adventure"],
 }
 
-likes = input("Which genres do you like ? (comma separated) ").lower().split(",")
-
-# Clean up spaces
-likes = [g.strip() for g in likes]
-
-print("\nRecommended for you:")
-
-found = False
-for movie, genres in movies.items():
-    if any(g in genres for g in likes):
-        print("-", movie)
-        found = True
-
-if not found:
-    print("Sorry, no matches found.")
+while True:
+    user_input = input("You: ").strip().lower()
+    
+    if user_input == "exit":
+        print("Bot: Goodbye!")
+        break
+    
+    if user_input in movies:
+        print("Bot: Recommended genres are:", movies[user_input])
+    else:
+        print("Bot: Sorry, I don’t understand that. Try typing just the movie title or type 'exit' to quit.")
